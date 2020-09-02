@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<title>Images</title>
+
+	
+		
+
+
+		<link rel="stylesheet"  type="text/css"  href="styles.css"    />	
+			<link rel="stylesheet"  type="text/css"  href="bootstrap.css"    />	
+	
+
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	</head>
+	<body>
+
+<nav class="nav">
+
+<div class="logo">
+    <h4>Navigation</h4>
+
+</div>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="aboutme.html">about</a></li>
+<li><a href="contact.html">contact</a></li>
+<li><a href="#">work</a></li>
+
+</ul>
+
+
+
+    </nav>
+
+		</hr>
+	<div class="container">
+		<h1>Image Gallery</h1>
+
+		<!--
+		   These are the thumbnail images.
+		   They are laid out using the 
+		   bootstrap grid.
+		   I have given them all the class
+		   "crop-image" which I use in the
+		   css and the javascript code.
+		-->
+		<div class="row">
+			<div class="col-md-3">
+				<img class="crop-img" 
+				  src="img_1.jpg" 
+				  alt="chicken and chips"/> 
+			</div>
+			<div class="col-md-3">
+				<img class="crop-img" 
+				  src="img_3.jpg" 
+				  alt="html and css"/> 
+			</div>
+			<div class="col-md-3">
+				<img class="crop-img" 
+				  src="img_4.jpg" 
+				  alt="chips"/> 
+			</div>
+			<div class="col-md-3">
+				<img class="crop-img" 
+				   src="img_5.jpg" 
+				   alt="Burger"/> 
+			</div>
+		</div>
+		<!--
+			this is the large image which is
+			on a row of its own. 
+			I will change it source in the 
+			javascript
+		-->
+		<div class="row">
+			<div class="col-md-12">
+				<img id="bigImage" 
+				  class="large-img" 
+				  src="img_1.jpg" 
+				  alt="graffittied building"/> 
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// when we click on the thumbnail
+		// we set the src attribute of the 
+		// big image to be the same as the 
+		// src of the image we have clicked on
+		// ("this"). This loads the same
+		// image file into the big image
+
+		$(".crop-img").click(function(){
+			$("#bigImage").attr('src', 
+				$(this).attr('src'));
+		});
+	</script>
+
+	</body>
+</html>
+
+
+
+
+
+
+
